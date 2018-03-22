@@ -1,3 +1,6 @@
+$topbar-background: #fefefe;
+$topbar-color: #2c3840;
+
 body{
   font-family: Roboto, Arial, sans-serif;
 }
@@ -5,20 +8,20 @@ body{
 
 
 .topbar-responsive {
-  background: #2c3840;
+  background: $topbar-background;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid white;
 }
 
 .topbar-responsive .topbar-responsive-logo {
-  color: #fefefe;
+  color: $topbar-color;
   vertical-align: middle;
   font-weight: 500;
   font-size: 1.15em;
 }
 
 .topbar-responsive .menu {
-  background: #2c3840;
+  background: $topbar-background;
 }
 
 .topbar-responsive .menu li:last-of-type {
@@ -26,7 +29,7 @@ body{
 }
 
 .topbar-responsive .menu a {
-  color: #fefefe;
+  color: $topbar-color;
   transition: color 0.15s ease-in;
 }
 
@@ -40,14 +43,14 @@ body{
 }
 
 .topbar-responsive .menu .topbar-responsive-button {
-  color: #fefefe;
-  border-color: #fefefe;
+  color: $topbar-color;
+  border-color: $topbar-color;
   border-radius: 5000px;
   transition: color 0.15s ease-in, border-color 0.15s ease-in;
 }
 
 .topbar-responsive .menu .topbar-responsive-button:hover {
-  color: #c6d1d8;
+  color: $topbar-color;
   border-color: #c6d1d8;
 }
 @media screen and (max-width: 39.9375em) {
@@ -251,6 +254,7 @@ body{
 
 #glitch-ux{
   display: none;
+  margin-left: 2rem;
 }
 
 .main-footer{
