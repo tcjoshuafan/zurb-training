@@ -8,106 +8,122 @@ html
 
     link(rel="stylesheet" href="css/foundation.css")
     link(rel="stylesheet" href="css/app.css")
-    //- link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i|Varela', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i|Varela', rel='stylesheet')
   body
 
     //-Responsive Navigation
-    nav(class="top-bar topbar-responsive")
-      div(class="top-bar-title")
-        span(data-responsive-toggle="topbar-responsive" data-hide-for="medium")
-          button(class="menu-icon" type="button" data-toggle="")
-        a(class="topbar-responsive-logo" href="#")  JF
-      div(id="topbar-responsive" class="topbar-responsive-links")
-        div(class="top-bar-right")
-          ul(class="menu simple vertical medium-horizontal")
-            li
-              a(href="#") UX/UI
-            li
-              a(href="#") Marketing
-            li
-              a(href="#") About
-            li
-              button(type="button" class="button hollow topbar-responsive-button") Contact
+    include components/nav.pug
+
 
     //-Header
-    div(class="hero-full-screen")
-      .top-content-section
-
-      div(class="middle-content-section")
-        h1 Hello! I'm Josh, and I am a
-        .glitch(id="glitch-business" data-text='Business') Business
-        .glitch(id="glitch-ux" data-text='Experience') Experience
-        h1 Designer &amp; Strategist
-        
-        
-
-      a(href='#main-content-section')
-        img(src="images/down-arrow.svg")
+    div(class="hero-full-screen" id="via_journey")
+      div(class="top-content-section")
+        div(class="responsive-embed")
+          video(id="bgVideo" autoplay loop)
+            source(src="videos/via_hero.webm")
 
     //- Main Section 
-
     div(id="main-content-section")
-      h2 Featured Work
+      div(class="spacer")
       div(class="grid-container")
         div(class="grid-x grid-padding-x ")
-          div(class="cell medium-6")
-            h2 VIA Journey
-            p A digital solution designed to address VIA Rail's declining ridership, VIA Journey realigns VIA Rail's brand proposition through the concept that a journey is as valuable as the destination. 
-            button(class="button hollow blue") View
-              a(href="via_journey.html")
-          div(class="cell medium-6")
-            img(src="images/via.png")
+          div(class="cell medium-8")
+            h2 VIA Journey - Product Proposal
+            p As Canada’s only provider of coast-to-coast passenger rail service, VIA Rail is Canada’s equivalent of a national passenger train. VIA Rail’s primary revenue stream comes from its local commuter services, with its highly rated long-distance tourism trains struggling in sales.  
+
+            p VIA Journey is our digital solution to VIA Rail’s declining ridership and brand misperception, inviting first-time potential passengers to reassess the value proposition VIA Rail offers. VIA Journey presents train travel as an alternative and enjoyable form of transportation tourism, aligning VIA Rail’s value proposition alongside consumers’ tangible, intangible, and aspirational values.
+            
+            p
+              strong Role: 
+              | Writer, Business Analyst, UX &amp; Content Strategist
+            p
+              strong Results:
+              ul
+                li identified and quantified VIA Rail's business problem through an analysis and consolidation of financial earnings reports and passenger statistics, placing their problem in economic context by researching other forms of tourism
+                li aligned business analysis with user experience principles, only targeting business problems addressable by design
+                li created initial set of wireframes that were eventually iterated to final product proposal
+                li produced/advised with significant amounts of written content, including but not limited to product copy, presentation scripts, video voiceovers, and preliminary reports to teaching staff
+
+          div(class="cell medium-4")
+            div(class="grid-y grid-padding-y")
+              p
+                strong Team: 
+                | Sarah Tong, Michelle Ng, Gabriel Yeung, Grant Zou
+              p
+                strong Timeline: 
+                | 5 weeks
               
-          div(class="cell medium-6")
-            h2 Toyota Guardian
-            p A mobile application that leverages Toyota's existing products and brand equity to begin building trust and credibility in Toyota's future autonomous technologies.
-            p Mentored by Chelsea Garber from ★ Inamoto &amp; Co.
-            button(class="button hollow blue") View
-              a(href="#")
-          div(class="cell medium-6")
-            img(src="images/toyota-guardian.png")
+              p
+                strong Resources:
+                ul
+                  li Brand Positioning (STP Marketing Process)
+                  li Experience Design: A Framework of Integrating brand
+                  li Google Venture Sprints
+                  li Maslow's Hierarchy of Needs
+                  li Statistics Canada
+                  li VIA Rail Annual Reports
+                  
+      //- div(data-sticky-container)
+      //-   div(class="sticky" data-sticky)
+      //-     ul(class="menu align-center" id="second-nav" data-magellan)
+      //-       li 
+      //-         a(href="#business") Business Context  
+      //-       li 
+      //-         a(href="#opportunity") Opportunity 
+      //-       li 
+      //-         a(href="#process") Process 
+      //-       li 
+      //-         a(href="#prototype") Prototype
+      //-       li 
+      //-         a(href="#reflection") Reflection
+      
+      ul(class="menu align-center" id="second-nav" data-magellan)
+        li 
+          a(href="#business") Business Context  
+        li 
+          a(href="#opportunity") Opportunity 
+        li 
+          a(href="#process") Process 
+        li 
+          a(href="#prototype") Prototype
+        li 
+          a(href="#reflection") Reflection
+      
+      div(class="content-sections")
+        section(id="business" data-magellan-target="business")
+          h2 Business Context 
+          div(class="grid-container")
+            div(class="grid-x grid-x-padding")
+              div(class="cell")
+                h3 Problem
+                img(src="images/business_problem.png")
+                p In the last two years, the Canadian tourism industry has seen a surge in demand as an increasing number of Canadians choose to vacation domestically. This growth in the transportation tourism industry has largely been driven by passenger air and rail services, with rail competitors such as Rocky Mountaineer seeing double-digit growth. In spite of this, VIA Rail is struggling and has seen its tourism trains losing $8 million in 2016 alone. 
+              div(class="cell medium-5")
+                img(src="https://static1.squarespace.com/static/5a38be54f43b5528f61424f6/t/5a8292fd8165f52c4081a793/1518507941259/Acrobat_2018-01-24_23-56-28.png?format=1500w")
+              div(class="cell medium-7")
+                p Preliminary secondary research led us to our initial assumption; VIA Rail was an unappealing option for tourism due to painpoints surrounding higher upfront costs of travel, unpredictable and extended delays, and cramped living and leisure spaces. Our early brand positioning matrices seemed to verify this assumption, with VIA Rail being plotted against competitors across the tourism transportation industry. However, I decided to leverage VIA Rail’s recent Canada 150 campaign and brought in a number of our peers who had experienced VIA Rail firsthand.
+                
+              div(class="cell")
+                h3 Insights: User &amp; Brand Relationship
+                p These user interviews helped place our secondary research in context, and revealed a number of insights that corrected our assumptions:
+                ol
+                  li Airlines are only a competitor when VIA Rail is perceived simply as a form of A-to-B transport; for a cheaper price and less travel times, airlines are the obvious choice of transport
+                  li  The higher cost of VIA Rail is much more reasonable when the packaged solution is broken down into a hotel, dining, and tourism travel experience
+                  li The actual onboard touchpoints we thought of as painpoints (delays, cramped spaces) were actually quite enjoyable, with VIA Rail’s staff providing excellent hospitality throughout the trip; our interviewees felt that these were not significant painpoints
+                  li VIA Rail’s existing website does little to differentiate its tourism products from its more mundane commuter services; the value proposition was unclear required significant cognitive overhead to explicate
+              
+        section(id="opportunity" data-magellan-target="opportunity")
+          h2 Opportunity 
+        section(id="process" data-magellan-target="process")
+          h2 Process 
+        section(id="prototype" data-magellan-target="prototype")
+          h2 Prototype
+        section(id="reflection" data-magellan-target="reflection")
+          h2 Reflection 
+              
           
-          div(class="cell medium-6")
-            h2 NCIX PC
-            p A North American-wide market research project, with competitor analysis and business recommendations that were a major contribution to a 30% annual sales growth.
-            button(class="button hollow blue") View
-              a(href="#")
-          div(class="cell medium-6")
-            img(src="images/market-research.png")
     //-Footer
-    footer(class="main-footer")
-      div(class="grid-container")
-        div(class="grid-x grid-margin-x")
-          div(class="cell medium-4")
-            h3 Site Map
-            ul
-              li 
-                a(href="#") Home
-              li
-                a(href="#") UX/UI
-              li
-                a(href="#") Marketing
-              li 
-                a(href="#") About
-              li
-                a(href="#") Contact
-          div(class="cell medium-4")
-            h3 Process
-            ul
-              li
-                a(href="#") Style Guide
-              li 
-                a(href="#") Github Repo 
-              li
-                a(href="#") Sketches
-              
-          div(class="cell medium-4" id="footer-last")
-            h3 Citations
-            ul
-              li
-                a(href="#") Coding
-              li
-                a(href="#") Media Assets 
+    include components/footer.pug
         
 
 

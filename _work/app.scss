@@ -1,6 +1,7 @@
 $topbar-background: #fefefe;
 $topbar-color: #2c3840;
-
+$topbar-color-active: #295ca4;
+$josh-color: #295ca4;
 body{
   font-family: Roboto, Arial, sans-serif;
 }
@@ -10,7 +11,8 @@ body{
 .topbar-responsive {
   background: $topbar-background;
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid grey;
+  box-shadow: 1px 1px 5px 0px rgba(99,98,99,1);
 }
 
 .topbar-responsive .topbar-responsive-logo {
@@ -30,11 +32,13 @@ body{
 
 .topbar-responsive .menu a {
   color: $topbar-color;
-  transition: color 0.15s ease-in;
+  font-weight: 400;
+  transition: color font-weight 0.15s ease-in;
 }
 
 .topbar-responsive .menu a:hover {
-  color: #c6d1d8;
+  color: $topbar-color-active;
+  font-weight: bold;
 }
 @media screen and (max-width: 39.9375em) {
   .topbar-responsive .menu a {
@@ -51,7 +55,7 @@ body{
 
 .topbar-responsive .menu .topbar-responsive-button:hover {
   color: $topbar-color;
-  border-color: #c6d1d8;
+  border-color: $topbar-color-active;
 }
 @media screen and (max-width: 39.9375em) {
   .topbar-responsive .menu .topbar-responsive-button {
@@ -151,7 +155,7 @@ body{
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: #2c3840;
+  background: white;
   background-size: cover;
 }
 
@@ -163,7 +167,7 @@ body{
 
 .hero-full-screen .middle-content-section {
   text-align: center;
-  color: #fefefe;
+  color: black;
 }
 
 .hero-full-screen .middle-content-section h1{
@@ -180,7 +184,7 @@ body{
 }
 
 .glitch{
-  color:white;
+  color: $josh-color;
   font-size:100px;
   position:relative;
   width:400px;
@@ -200,8 +204,8 @@ body{
   left:2px;
   text-shadow:-1px 0 red;
   top:0;
-  color:white;
-  background:#2c3840;
+  color:$josh-color;
+  background:white;
   overflow:hidden;
   clip:rect(0,900px,0,0);
   animation:noise-anim 2s infinite linear alternate-reverse;
@@ -221,8 +225,8 @@ body{
   left:-2px;
   text-shadow:1px 0 blue;
   top:0;
-  color:white;
-  background:#2c3840;
+  color:$josh-color;
+  background:white;
   overflow:hidden;
   clip:rect(0,900px,0,0);
   animation:noise-anim-2 3s infinite linear alternate-reverse;
@@ -233,9 +237,17 @@ body{
   margin-top: 3rem;
 }
 
+#middle-content-section svg{
+  fill: black;
+}
+
 #main-content-section h2{
   text-align: center;
   font-family: Varela, Arial, sans-serif;
+}
+
+#main-content-section ul li{
+  color: black;
 }
 
 #main-content-section .grid-container .medium-6{
@@ -296,4 +308,53 @@ body{
 
 .main-footer ul{
   list-style: none;
+}
+
+#bgVideo{
+  height: auto;
+}
+.spacer{
+  height: 8rem;
+}
+
+#second-nav{
+  margin-top: 3rem;
+  background-color: $josh-color;
+  height: 4rem;
+  align-items: center;
+}
+
+#second-nav a{
+    color: white;
+    font-weight: 400;
+    transition: color font-weight 0.2s;
+}
+
+#second-nav a:hover{
+  color: #c6d1d8;
+  font-weight: bold;
+}
+
+#second-nav li{
+  margin-right: 2rem;
+}
+
+.content-sections section{
+  margin-top: 10rem;
+}
+
+.content-sections .cell{
+  margin-top: 2rem;
+}
+
+#business h3{
+  text-align: left;
+  margin-top: 2rem;
+  text-decoration: underline;
+  text-decoration-color: $josh-color;
+}
+
+#business li{
+  color: black;
+  margin-top: 1rem;
 }

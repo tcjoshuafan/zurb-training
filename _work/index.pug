@@ -8,26 +8,11 @@ html
 
     link(rel="stylesheet" href="css/foundation.css")
     link(rel="stylesheet" href="css/app.css")
-    //- link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i|Varela', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i|Varela', rel='stylesheet')
   body
 
     //-Responsive Navigation
-    nav(class="top-bar topbar-responsive")
-      div(class="top-bar-title")
-        span(data-responsive-toggle="topbar-responsive" data-hide-for="medium")
-          button(class="menu-icon" type="button" data-toggle="")
-        a(class="topbar-responsive-logo" href="#")  JF
-      div(id="topbar-responsive" class="topbar-responsive-links")
-        div(class="top-bar-right")
-          ul(class="menu simple vertical medium-horizontal")
-            li
-              a(href="via_journey.html") UX/UI
-            li
-              a(href="#") Marketing
-            li
-              a(href="#") About
-            li
-              button(type="button" class="button hollow topbar-responsive-button") Contact
+    include components/nav.pug
 
     //-Header
     div(class="hero-full-screen")
@@ -74,40 +59,7 @@ html
           div(class="cell medium-6")
             img(src="images/market-research.png")
     //-Footer
-    footer(class="main-footer")
-      div(class="grid-container")
-        div(class="grid-x grid-margin-x")
-          div(class="cell medium-4")
-            h3 Site Map
-            ul
-              li 
-                a(href="#") Home
-              li
-                a(href="#") UX/UI
-              li
-                a(href="#") Marketing
-              li 
-                a(href="#") About
-              li
-                a(href="#") Contact
-          div(class="cell medium-4")
-            h3 Process
-            ul
-              li
-                a(href="#") Style Guide
-              li 
-                a(href="#") Github Repo 
-              li
-                a(href="#") Sketches
-              
-          div(class="cell medium-4" id="footer-last")
-            h3 Citations
-            ul
-              li
-                a(href="#") Coding
-              li
-                a(href="#") Media Assets 
-        
+    include components/footer.pug
 
 
     //- Script Load 
